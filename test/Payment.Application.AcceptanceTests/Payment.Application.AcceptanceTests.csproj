@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyTitle>Payment.Application.AcceptanceTests</AssemblyTitle>
+    <Product>Payment.Application.AcceptanceTests</Product>
+    <RootNamespace>Payment.Application.AcceptanceTests</RootNamespace>
+    <Copyright>Copyright © 2023</Copyright>
+  </PropertyGroup>
+  <ItemGroup Label="External Packages">
+    <PackageReference Include="Optional" Version="4.0.0" />
+    <PackageReference Include="OneOf" Version="3.0.263" />
+    <PackageReference Include="AutoFixture" Version="4.18.1" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="NSubstitute" Version="5.1.0" />
+  </ItemGroup>
+  <ItemGroup Label="Internal Packages">
+    <ProjectReference Include="..\..\src\Payment.Application\Payment.Application.csproj" />
+    <ProjectReference Include="..\..\src\Payment.Infrastructure\Payment.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Features\User\CreateUser.feature.cs">
+      <DependentUpon>CreateUser.feature</DependentUpon>
+      <AutoGen>true</AutoGen>
+      <DesignTime>true</DesignTime>
+      <Visible>true</Visible>
+    </Compile>
+    <Compile Update="Features\Wallet\CreateWallet.feature.cs">
+      <DependentUpon>CreateWallet.feature</DependentUpon>
+      <AutoGen>true</AutoGen>
+      <DesignTime>true</DesignTime>
+      <Visible>true</Visible>
+    </Compile>
+  </ItemGroup>
+</Project>

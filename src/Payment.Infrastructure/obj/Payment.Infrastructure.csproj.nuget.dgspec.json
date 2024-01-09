@@ -1,0 +1,291 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Infrastructure/Payment.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Application/Payment.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Application/Payment.Application.csproj",
+        "projectName": "Payment.Application",
+        "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Application/Payment.Application.csproj",
+        "packagesPath": "/Users/salahuddinzaki/.nuget/packages/",
+        "outputPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Application/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/salahuddinzaki/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj": {
+                "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj"
+              },
+              "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/Payment.Domain.csproj": {
+                "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/Payment.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.1, )"
+            },
+            "OneOf": {
+              "target": "Package",
+              "version": "[3.0.263, )"
+            },
+            "Optional": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj",
+        "projectName": "Payment.Common",
+        "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj",
+        "packagesPath": "/Users/salahuddinzaki/.nuget/packages/",
+        "outputPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/salahuddinzaki/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/Payment.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/Payment.Domain.csproj",
+        "projectName": "Payment.Domain",
+        "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/Payment.Domain.csproj",
+        "packagesPath": "/Users/salahuddinzaki/.nuget/packages/",
+        "outputPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/salahuddinzaki/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj": {
+                "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Infrastructure/Payment.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Infrastructure/Payment.Infrastructure.csproj",
+        "projectName": "Payment.Infrastructure",
+        "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Infrastructure/Payment.Infrastructure.csproj",
+        "packagesPath": "/Users/salahuddinzaki/.nuget/packages/",
+        "outputPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/salahuddinzaki/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Application/Payment.Application.csproj": {
+                "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Application/Payment.Application.csproj"
+              },
+              "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj": {
+                "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Common/Payment.Common.csproj"
+              },
+              "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/Payment.Domain.csproj": {
+                "projectPath": "/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/src/Payment.Domain/Payment.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

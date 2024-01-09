@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyTitle>Payment.Domain</AssemblyTitle>
+    <Product>Payment.Domain</Product>
+    <Copyright>Copyright © 2023</Copyright>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>Sal Zaki</Authors>
+    <Title>Payment Domain</Title>
+    <Description>Payment.Domain Project</Description>
+    <RootNamespace>Payment.Domain</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup Label="External Packages">
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="ValueObjects\Currency.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Currency.Generated.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ValueObjects\Currency.Generated.cs">
+      <DependentUpon>Currency.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup Label="Internal Packages">
+    <ProjectReference Include="..\..\src\Payment.Common\Payment.Common.csproj" />
+  </ItemGroup>
+</Project>

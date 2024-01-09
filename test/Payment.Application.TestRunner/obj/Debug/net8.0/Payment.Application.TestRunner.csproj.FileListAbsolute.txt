@@ -1,0 +1,14 @@
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/bin/Debug/net8.0/Payment.Application.TestRunner
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/bin/Debug/net8.0/Payment.Application.TestRunner.deps.json
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/bin/Debug/net8.0/Payment.Application.TestRunner.runtimeconfig.json
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/bin/Debug/net8.0/Payment.Application.TestRunner.dll
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/bin/Debug/net8.0/Payment.Application.TestRunner.pdb
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/Payment.Application.TestRunner.GeneratedMSBuildEditorConfig.editorconfig
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/Payment.Application.TestRunner.AssemblyInfoInputs.cache
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/Payment.Application.TestRunner.AssemblyInfo.cs
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/Payment.Application.TestRunner.csproj.CoreCompileInputs.cache
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/Payment.Application.TestRunner.dll
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/refint/Payment.Application.TestRunner.dll
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/Payment.Application.TestRunner.pdb
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/Payment.Application.TestRunner.genruntimeconfig.cache
+/Users/salahuddinzaki/Documents/Development/Mangopay/Payment/test/Payment.Application.TestRunner/obj/Debug/net8.0/ref/Payment.Application.TestRunner.dll
