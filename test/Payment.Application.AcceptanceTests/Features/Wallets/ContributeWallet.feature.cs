@@ -41,8 +41,8 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Wallets", "Contribute Wallet", "![Wallet] (../../../assets/wallet.svg)\n\n    In order to use wallets in the system" +
-                    "\n\n    As a wallet service\n\n    I want to facilitate the contribution to the wall" +
-                    "ets", ProgrammingLanguage.CSharp, featureTags);
+                    "\n\n    As a wallet service\n\n    I want to facilitate the contributions to the wal" +
+                    "lets", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
