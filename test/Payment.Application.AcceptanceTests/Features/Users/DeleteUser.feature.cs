@@ -84,10 +84,13 @@ namespace Payment.Application.AcceptanceTests.Features.Users
                         "UserId",
                         "FullName"});
             table2.AddRow(new string[] {
-                        "73AC6B13-780F-4395-B468-506904422719",
-                        "John Doe"});
+                        "B404D785-C887-4142-A6B3-E567BB699F24",
+                        "Sarah Atkins"});
+            table2.AddRow(new string[] {
+                        "C5BC9FE8-AE48-4932-B7DF-ACDB64188C16",
+                        "Richard Dawson"});
 #line 12
-      testRunner.Given("following user in the system", ((string)(null)), table2, "Given ");
+      testRunner.Given("following users in the system", ((string)(null)), table2, "Given ");
 #line hidden
         }
         
@@ -101,7 +104,7 @@ namespace Payment.Application.AcceptanceTests.Features.Users
         [Xunit.TraitAttribute("Description", "Delete a user")]
         [Xunit.TraitAttribute("Category", "user")]
         [Xunit.TraitAttribute("Category", "happy-paths")]
-        [Xunit.InlineDataAttribute("\"73AC6B13-780F-4395-B468-506904422719\"", new string[0])]
+        [Xunit.InlineDataAttribute("B404D785-C887-4142-A6B3-E567BB699F24", new string[0])]
         public void DeleteAUser(string userId, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -115,7 +118,7 @@ namespace Payment.Application.AcceptanceTests.Features.Users
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("UserId", userId);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a user", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 21
+#line 23
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -128,14 +131,72 @@ namespace Payment.Application.AcceptanceTests.Features.Users
 #line 11
     this.FeatureBackground();
 #line hidden
-#line 22
+#line 24
       testRunner.Given(string.Format("a user id {0}", userId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 23
+#line 25
       testRunner.When("I submit the request to delete the user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 26
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableTheoryAttribute(DisplayName="Delete a user with friend")]
+        [Xunit.TraitAttribute("FeatureTitle", "Delete User")]
+        [Xunit.TraitAttribute("Description", "Delete a user with friend")]
+        [Xunit.TraitAttribute("Category", "user")]
+        [Xunit.TraitAttribute("Category", "happy-paths-with-friendship")]
+        [Xunit.InlineDataAttribute("B404D785-C887-4142-A6B3-E567BB699F24", "C5BC9FE8-AE48-4932-B7DF-ACDB64188C16", new string[0])]
+        public void DeleteAUserWithFriend(string userId, string friendId, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "user",
+                    "happy-paths-with-friendship"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("UserId", userId);
+            argumentsOfScenario.Add("FriendId", friendId);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a user with friend", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 34
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 11
+    this.FeatureBackground();
+#line hidden
+#line 35
+      testRunner.Given(string.Format("a user id {0}", userId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "UserId",
+                            "FriendId"});
+                table3.AddRow(new string[] {
+                            "B404D785-C887-4142-A6B3-E567BB699F24",
+                            "C5BC9FE8-AE48-4932-B7DF-ACDB64188C16"});
+#line 36
+      testRunner.And("the user has the following friend in the system", ((string)(null)), table3, "And ");
+#line hidden
+#line 39
+      testRunner.When("I submit the request to delete the user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 40
+      testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 41
+      testRunner.And(string.Format("the user\'s friendship with user id {0} should also be deleted", friendId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

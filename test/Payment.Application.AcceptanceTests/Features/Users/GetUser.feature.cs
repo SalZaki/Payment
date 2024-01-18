@@ -80,20 +80,20 @@ namespace Payment.Application.AcceptanceTests.Features.Users
         {
 #line 11
     #line hidden
-            TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserId",
                         "FullName"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "73AC6B13-780F-4395-B468-506904422719",
                         "John Doe"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                         "Guillaume Reynard"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "639A1CDD-7915-47E5-AA2B-263873542B28",
                         "Dr Andrew Martin"});
 #line 12
-      testRunner.Given("following users in the system", ((string)(null)), table14, "Given ");
+      testRunner.Given("following users in the system", ((string)(null)), table15, "Given ");
 #line hidden
         }
         
@@ -107,7 +107,7 @@ namespace Payment.Application.AcceptanceTests.Features.Users
         [Xunit.TraitAttribute("Description", "Get a user")]
         [Xunit.TraitAttribute("Category", "user")]
         [Xunit.TraitAttribute("Category", "happy-paths")]
-        [Xunit.InlineDataAttribute("\"73AC6B13-780F-4395-B468-506904422719\"", new string[0])]
+        [Xunit.InlineDataAttribute("73AC6B13-780F-4395-B468-506904422719", new string[0])]
         public void GetAUser(string userId, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -155,8 +155,8 @@ namespace Payment.Application.AcceptanceTests.Features.Users
         [Xunit.TraitAttribute("Description", "Get a user with friends")]
         [Xunit.TraitAttribute("Category", "user")]
         [Xunit.TraitAttribute("Category", "happy-paths")]
-        [Xunit.InlineDataAttribute("\"73AC6B13-780F-4395-B468-506904422719\"", "\"FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF\"", "\"Guillaume Reynard\"", new string[0])]
-        [Xunit.InlineDataAttribute("\"73AC6B13-780F-4395-B468-506904422719\"", "\"639A1CDD-7915-47E5-AA2B-263873542B28\"", "\"Dr Andrew Martin\"", new string[0])]
+        [Xunit.InlineDataAttribute("73AC6B13-780F-4395-B468-506904422719", "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF", "\"Guillaume Reynard\"", new string[0])]
+        [Xunit.InlineDataAttribute("73AC6B13-780F-4395-B468-506904422719", "639A1CDD-7915-47E5-AA2B-263873542B28", "\"Dr Andrew Martin\"", new string[0])]
         public void GetAUserWithFriends(string userId, string friendId, string friendFullName, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -188,17 +188,17 @@ namespace Payment.Application.AcceptanceTests.Features.Users
 #line 37
       testRunner.Given(string.Format("a user with id {0}", userId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "FriendId"});
-                table15.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "73AC6B13-780F-4395-B468-506904422719",
                             "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF"});
-                table15.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "73AC6B13-780F-4395-B468-506904422719",
                             "639A1CDD-7915-47E5-AA2B-263873542B28"});
 #line 38
-      testRunner.And("following friendships for the user exist in the system", ((string)(null)), table15, "And ");
+      testRunner.And("following friendships for the user exist in the system", ((string)(null)), table16, "And ");
 #line hidden
 #line 42
       testRunner.When("I submit the query to get the user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

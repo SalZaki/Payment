@@ -81,29 +81,29 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
         {
 #line 11
     #line hidden
-            TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserId",
                         "Fullname"});
-            table16.AddRow(new string[] {
+            table17.AddRow(new string[] {
                         "6871AEE6-1814-4EBE-9C0F-EDB7201DAD64",
                         "John Doe"});
-            table16.AddRow(new string[] {
+            table17.AddRow(new string[] {
                         "06E76F39-79D0-4688-B26E-3B162B3C88FA",
                         "François Dupont"});
-            table16.AddRow(new string[] {
+            table17.AddRow(new string[] {
                         "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                         "Sara MonaLisa"});
 #line 12
-      testRunner.Given("following users in the system", ((string)(null)), table16, "Given ");
+      testRunner.Given("following users in the system", ((string)(null)), table17, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                         "WalletId",
                         "UserId",
                         "Currency",
                         "Amount",
                         "ShareCount",
                         "TotalSharesAmount"});
-            table17.AddRow(new string[] {
+            table18.AddRow(new string[] {
                         "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                         "6871AEE6-1814-4EBE-9C0F-EDB7201DAD64",
                         "GBP",
@@ -111,7 +111,7 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
                         "0",
                         "0.00"});
 #line 17
-      testRunner.And("following wallet with no shares in the system", ((string)(null)), table17, "And ");
+      testRunner.And("following wallet with no shares in the system", ((string)(null)), table18, "And ");
 #line hidden
         }
         
@@ -152,18 +152,18 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 11
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
                             "ContributorId",
                             "Currency",
                             "Amount",
                             "Country"});
-                table18.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "06E76F39-79D0-4688-B26E-3B162B3C88FA",
                             "EUR",
                             "62.52",
                             "Italy"});
 #line 38
-      testRunner.Given("the following share to be contributed to user\'s wallet", ((string)(null)), table18, "Given ");
+      testRunner.Given("the following share to be contributed to user\'s wallet", ((string)(null)), table19, "Given ");
 #line hidden
 #line 41
       testRunner.And(string.Format("wallet id {0}", walletId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -174,20 +174,20 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 43
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                             "WalletId",
                             "ContributorId",
                             "ShareCount",
                             "Currency",
                             "TotalSharesAmount"});
-                table19.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "06E76F39-79D0-4688-B26E-3B162B3C88FA",
                             "1",
                             "EUR",
                             "62.52"});
 #line 44
-      testRunner.And("the wallet should have", ((string)(null)), table19, "And ");
+      testRunner.And("the wallet should have", ((string)(null)), table20, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -228,33 +228,33 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 11
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                             "WalletId",
                             "ContributorId",
                             "Currency",
                             "Amount",
                             "Country"});
-                table20.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "TND",
                             "262.22",
                             "Tunisia"});
 #line 55
-      testRunner.Given("the following share are already added to user\'s wallet", ((string)(null)), table20, "Given ");
+      testRunner.Given("the following share are already added to user\'s wallet", ((string)(null)), table21, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
                             "ContributorId",
                             "Currency",
                             "Amount",
                             "Country"});
-                table21.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "TND",
                             "30.00",
                             "Tunisia"});
 #line 58
-      testRunner.And("the following shares to be contributed to user\'s wallet", ((string)(null)), table21, "And ");
+      testRunner.And("the following shares to be contributed to user\'s wallet", ((string)(null)), table22, "And ");
 #line hidden
 #line 61
       testRunner.And(string.Format("wallet id {0}", walletId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -265,20 +265,20 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 63
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "WalletId",
                             "ContributorId",
                             "ShareCount",
                             "Currency",
                             "TotalSharesAmount"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "2",
                             "TND",
                             "292.22"});
 #line 64
-      testRunner.And("the wallet should have", ((string)(null)), table22, "And ");
+      testRunner.And("the wallet should have", ((string)(null)), table23, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -316,21 +316,6 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 11
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
-                            "WalletId",
-                            "ContributorId",
-                            "Currency",
-                            "Amount",
-                            "Country"});
-                table23.AddRow(new string[] {
-                            "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
-                            "A0CB3869-B481-48D8-A452-8E7776F71DF4",
-                            "TND",
-                            "262.22",
-                            "Tunisia"});
-#line 75
-      testRunner.Given("the following share are already added to user\'s wallet", ((string)(null)), table23, "Given ");
-#line hidden
                 TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
                             "WalletId",
                             "ContributorId",
@@ -340,17 +325,32 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
                 table24.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
+                            "TND",
+                            "262.22",
+                            "Tunisia"});
+#line 75
+      testRunner.Given("the following share are already added to user\'s wallet", ((string)(null)), table24, "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                            "WalletId",
+                            "ContributorId",
+                            "Currency",
+                            "Amount",
+                            "Country"});
+                table25.AddRow(new string[] {
+                            "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
+                            "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "NZD",
                             "31.24",
                             "New Zealand"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "TND",
                             "30.00",
                             "Tunisia"});
 #line 78
-      testRunner.And("the following shares to be contributed to user\'s wallet", ((string)(null)), table24, "And ");
+      testRunner.And("the following shares to be contributed to user\'s wallet", ((string)(null)), table25, "And ");
 #line hidden
 #line 82
       testRunner.And(string.Format("wallet id {0}", walletId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -361,26 +361,26 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 84
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
                             "WalletId",
                             "ContributorId",
                             "ShareCount",
                             "Currency",
                             "TotalSharesAmount"});
-                table25.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "2",
                             "TND",
                             "292.22"});
-                table25.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "1",
                             "NZD",
                             "31.24"});
 #line 85
-      testRunner.And("the wallet should have", ((string)(null)), table25, "And ");
+      testRunner.And("the wallet should have", ((string)(null)), table26, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -421,28 +421,28 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 97
       testRunner.Given(string.Format("wallet id {0}", walletId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
                             "ContributorId",
                             "Currency",
                             "Amount",
                             "Country"});
-                table26.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "06E76F39-79D0-4688-B26E-3B162B3C88FA",
                             "EUR",
                             "233.61",
                             "Luxembourg"});
-                table26.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "06E76F39-79D0-4688-B26E-3B162B3C88FA",
                             "EUR",
                             "43.20",
                             "Luxembourg"});
-                table26.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "JPY",
                             "1200.00",
                             "Japan"});
 #line 98
-      testRunner.And("the following shares to be contributed to user\'s wallet", ((string)(null)), table26, "And ");
+      testRunner.And("the following shares to be contributed to user\'s wallet", ((string)(null)), table27, "And ");
 #line hidden
 #line 103
       testRunner.When("I submit a multi share request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -450,26 +450,26 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 104
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
                             "WalletId",
                             "ContributorId",
                             "ShareCount",
                             "Currency",
                             "TotalSharesAmount"});
-                table27.AddRow(new string[] {
+                table28.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "06E76F39-79D0-4688-B26E-3B162B3C88FA",
                             "2",
                             "EUR",
                             "276.81"});
-                table27.AddRow(new string[] {
+                table28.AddRow(new string[] {
                             "3DF951E4-7317-4F17-AB4A-D9EF924D84BF",
                             "A0CB3869-B481-48D8-A452-8E7776F71DF4",
                             "1",
                             "JPY",
                             "1200.00"});
 #line 105
-      testRunner.And("the wallet should have", ((string)(null)), table27, "And ");
+      testRunner.And("the wallet should have", ((string)(null)), table28, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

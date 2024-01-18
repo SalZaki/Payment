@@ -50,13 +50,23 @@ public class DeleteUserCommandHandler(
     {
       var userId = UserId.Create(Guid.Parse(command.UserId));
 
+      var user = await _userRepository.FindByIdAsync(userId, cancellationToken);
+
+      var friends = user.Friendships.Select(x => x.Friend);
+
+      foreach (var friend in friends)
+      {
+        friend.RemoveFriend(user);
+        await _userRepository.UpdateAsync(friend, cancellationToken);
+      }
+
       await _userRepository.DeleteByIdAsync(userId, cancellationToken);
 
       return Option.None<ErrorResponse>();
     }
     catch (Exception ex)
     {
-      return Option.Some(new ErrorResponse { Error = $"Failed to delete user due to {ex.Message}." });
+      return Option.Some(new ErrorResponse {Error = $"Failed to delete user due to {ex.Message}."});
     }
   }
 }

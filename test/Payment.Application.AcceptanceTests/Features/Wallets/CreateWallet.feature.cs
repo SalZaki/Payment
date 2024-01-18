@@ -80,17 +80,17 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
         {
 #line 11
     #line hidden
-            TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserId",
                         "Fullname"});
-            table28.AddRow(new string[] {
+            table29.AddRow(new string[] {
                         "4E162382-324E-49B7-8629-EB5A929BCB44",
                         "Susan Reed"});
-            table28.AddRow(new string[] {
+            table29.AddRow(new string[] {
                         "06839E7B-18D1-4FFB-8688-5B0E60F6A5B5",
                         "John Peters"});
 #line 12
-      testRunner.Given("the following users exists in the system", ((string)(null)), table28, "Given ");
+      testRunner.Given("the following users exists in the system", ((string)(null)), table29, "Given ");
 #line hidden
 #line 16
       testRunner.And("there are no wallets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -146,18 +146,18 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 30
       testRunner.And("the response should have a newly created wallet id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "ShareCount",
                             "Amount",
                             "TotalSharesAmount"});
-                table29.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             "06839E7B-18D1-4FFB-8688-5B0E60F6A5B5",
                             "0",
                             "0.00",
                             "0.00"});
 #line 31
-      testRunner.And("the wallet should have", ((string)(null)), table29, "And ");
+      testRunner.And("the wallet should have", ((string)(null)), table30, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -212,20 +212,20 @@ namespace Payment.Application.AcceptanceTests.Features.Wallets
 #line 46
       testRunner.And("the response should have a newly created wallet id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "ShareCount",
                             "Currency",
                             "Amount",
                             "TotalSharesAmount"});
-                table30.AddRow(new string[] {
+                table31.AddRow(new string[] {
                             "06839E7B-18D1-4FFB-8688-5B0E60F6A5B5",
                             "0",
                             "GBP",
                             "100.00",
                             "0.00"});
 #line 47
-      testRunner.And("the wallet should have", ((string)(null)), table30, "And ");
+      testRunner.And("the wallet should have", ((string)(null)), table31, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -127,8 +127,7 @@ public sealed class InMemoryUserRepository : IUserRepository
     return Task.FromResult(result ?? User.NotFound);
   }
 
-  public Task<IReadOnlyList<User>> FindAsync(Expression<Func<User, bool>> predicate,
-    CancellationToken cancellationToken = default)
+  public Task<IReadOnlyList<User>> FindAsync(Expression<Func<User, bool>> predicate, CancellationToken cancellationToken = default)
   {
     Guard.Against.Null(predicate, nameof(predicate));
 

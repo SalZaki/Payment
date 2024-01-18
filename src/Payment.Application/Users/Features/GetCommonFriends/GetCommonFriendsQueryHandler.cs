@@ -54,7 +54,7 @@ public sealed class GetCommonFriendsQueryHandler(
 
       var user2Result = await GetUserAsync(Guid.Parse(query.UserId2), cancellationToken);
       if (user2Result.IsT1) return user2Result.AsT1;
-      var user2 = user1Result.AsT0;
+      var user2 = user2Result.AsT0;
 
       var result = new List<GetCommonFriendsResponse>();
 

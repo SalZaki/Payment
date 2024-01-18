@@ -81,35 +81,35 @@ namespace Payment.Application.AcceptanceTests.Features.Users
         {
 #line 11
     #line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserId",
                         "FullName"});
-            table3.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "73AC6B13-780F-4395-B468-506904422719",
                         "John Doe"});
-            table3.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                         "Samantha James"});
-            table3.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "639A1CDD-7915-47E5-AA2B-263873542B28",
                         "Dr Andrew Martin"});
 #line 12
-      testRunner.Given("following users in the system", ((string)(null)), table3, "Given ");
+      testRunner.Given("following users in the system", ((string)(null)), table4, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserId",
                         "FriendId"});
-            table4.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                         "73AC6B13-780F-4395-B468-506904422719"});
-            table4.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                         "639A1CDD-7915-47E5-AA2B-263873542B28"});
-            table4.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "73AC6B13-780F-4395-B468-506904422719",
                         "639A1CDD-7915-47E5-AA2B-263873542B28"});
 #line 17
-      testRunner.And("the users has the following friends in the system", ((string)(null)), table4, "And ");
+      testRunner.And("the users has the following friends in the system", ((string)(null)), table5, "And ");
 #line hidden
         }
         
@@ -163,14 +163,14 @@ namespace Payment.Application.AcceptanceTests.Features.Users
 #line 32
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "FullName"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "639A1CDD-7915-47E5-AA2B-263873542B28",
                             "Dr Andrew Martin"});
 #line 33
-      testRunner.And("the response should have following common friend", ((string)(null)), table5, "And ");
+      testRunner.And("the response should have following common friend", ((string)(null)), table6, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

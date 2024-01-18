@@ -1,4 +1,3 @@
-using Ardalis.GuardClauses;
 using Payment.Domain.Exceptions;
 
 namespace Payment.Domain.ValueObjects;
@@ -9,10 +8,10 @@ public sealed record ShareId
 
   public static ShareId Create(Guid value)
   {
-    // if (value == Guid.Empty || value == default)
-    // {
-    //   throw new InvalidShareIdException(value);
-    // }
+    if (value == Guid.Empty || value == default)
+    {
+      throw new InvalidShareIdException(value);
+    }
 
     return new ShareId {Value = value};
   }

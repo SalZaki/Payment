@@ -81,23 +81,23 @@ namespace Payment.Application.AcceptanceTests.Features.Users
         {
 #line 11
     #line hidden
-            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserId",
                         "FullName"});
-            table6.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "73AC6B13-780F-4395-B468-506904422719",
                         "John Doe"});
-            table6.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                         "Samantha James"});
-            table6.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "639A1CDD-7915-47E5-AA2B-263873542B28",
                         "Dr Andrew Martin"});
-            table6.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "11CC3F2D-081A-451D-9387-8B8989CA9C06",
                         "Sarah Williams"});
 #line 12
-      testRunner.Given("following users in the system", ((string)(null)), table6, "Given ");
+      testRunner.Given("following users in the system", ((string)(null)), table7, "Given ");
 #line hidden
         }
         
@@ -202,23 +202,23 @@ namespace Payment.Application.AcceptanceTests.Features.Users
 #line 41
       testRunner.And(string.Format("a user2 with id {0}", userId2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                            "UserId",
-                            "FriendId"});
-                table7.AddRow(new string[] {
-                            "73AC6B13-780F-4395-B468-506904422719",
-                            "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF"});
-#line 42
-      testRunner.And("the user1 has user2 as friend in the system", ((string)(null)), table7, "And ");
-#line hidden
                 TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "FriendId"});
                 table8.AddRow(new string[] {
+                            "73AC6B13-780F-4395-B468-506904422719",
+                            "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF"});
+#line 42
+      testRunner.And("the user1 has user2 as friend in the system", ((string)(null)), table8, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "UserId",
+                            "FriendId"});
+                table9.AddRow(new string[] {
                             "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                             "73AC6B13-780F-4395-B468-506904422719"});
 #line 45
-      testRunner.And("the user2 has user1 as friend in the system", ((string)(null)), table8, "And ");
+      testRunner.And("the user2 has user1 as friend in the system", ((string)(null)), table9, "And ");
 #line hidden
 #line 48
       testRunner.And(string.Format("max level is {0}", maxLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -229,17 +229,17 @@ namespace Payment.Application.AcceptanceTests.Features.Users
 #line 50
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "FullName"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "73AC6B13-780F-4395-B468-506904422719",
                             "John Doe"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                             "Samantha James"});
 #line 51
-      testRunner.And("the response should have following connected list", ((string)(null)), table9, "And ");
+      testRunner.And("the response should have following connected list", ((string)(null)), table10, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -288,32 +288,32 @@ namespace Payment.Application.AcceptanceTests.Features.Users
 #line 65
       testRunner.And(string.Format("max level is {0}", maxLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
-                            "UserId",
-                            "FriendId"});
-                table10.AddRow(new string[] {
-                            "73AC6B13-780F-4395-B468-506904422719",
-                            "639A1CDD-7915-47E5-AA2B-263873542B28"});
-#line 66
-      testRunner.And("user1 has user3 as friend in the system", ((string)(null)), table10, "And ");
-#line hidden
                 TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "FriendId"});
                 table11.AddRow(new string[] {
-                            "639A1CDD-7915-47E5-AA2B-263873542B28",
-                            "11CC3F2D-081A-451D-9387-8B8989CA9C06"});
-#line 69
-      testRunner.And("user3 has user4 as friend in the system", ((string)(null)), table11, "And ");
+                            "73AC6B13-780F-4395-B468-506904422719",
+                            "639A1CDD-7915-47E5-AA2B-263873542B28"});
+#line 66
+      testRunner.And("user1 has user3 as friend in the system", ((string)(null)), table11, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "FriendId"});
                 table12.AddRow(new string[] {
+                            "639A1CDD-7915-47E5-AA2B-263873542B28",
+                            "11CC3F2D-081A-451D-9387-8B8989CA9C06"});
+#line 69
+      testRunner.And("user3 has user4 as friend in the system", ((string)(null)), table12, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                            "UserId",
+                            "FriendId"});
+                table13.AddRow(new string[] {
                             "11CC3F2D-081A-451D-9387-8B8989CA9C06",
                             "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF"});
 #line 72
-      testRunner.And("user4 has user2 as friend in the system", ((string)(null)), table12, "And ");
+      testRunner.And("user4 has user2 as friend in the system", ((string)(null)), table13, "And ");
 #line hidden
 #line 75
       testRunner.When("I submit the request to get connection list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -321,23 +321,23 @@ namespace Payment.Application.AcceptanceTests.Features.Users
 #line 76
       testRunner.Then("the response should be successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserId",
                             "FullName"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "73AC6B13-780F-4395-B468-506904422719",
                             "John Doe"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "639A1CDD-7915-47E5-AA2B-263873542B28",
                             "Dr Andrew Martin"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF",
                             "Samantha James"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "11CC3F2D-081A-451D-9387-8B8989CA9C06",
                             "Sarah Williams"});
 #line 77
-      testRunner.And("the response should have following connected list", ((string)(null)), table13, "And ");
+      testRunner.And("the response should have following connected list", ((string)(null)), table14, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

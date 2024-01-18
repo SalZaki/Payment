@@ -42,15 +42,28 @@ public sealed class TestContext
   {
     foreach (var friendRow in friendshipTable)
     {
-      var user = await GetUser(UserId.Create(friendRow.UserId));
-      if (user == User.NotFound) continue;
+      await SeedFriend(friendRow);
+    }
+  }
 
-      var friend = await GetUser(UserId.Create(friendRow.FriendId));
-      if (friend == User.NotFound) continue;
+  private async Task SeedFriend(FriendshipTable friendshipTable)
+  {
+    var user = await GetUser(UserId.Create(friendshipTable.UserId));
+    if (user == User.NotFound) return;
 
-      var friendship = Friendship.Create(FriendId.Create(Guid.NewGuid()), user.Id, friend);
-      user.Friendships.Add(friendship);
+    var friend = await GetUser(UserId.Create(friendshipTable.FriendId));
+    if (friend == User.NotFound) return;
+
+    if (user.Friendships.Any(x => x.Friend.Id == friend.Id) == false)
+    {
+      user.AddFriend(friend);
       await UserRepository.UpdateAsync(user, CancellationToken.None);
+    }
+
+    if (friend.Friendships.Any(x => x.Friend.Id == user.Id) == false)
+    {
+      friend.AddFriend(user);
+      await UserRepository.UpdateAsync(friend, CancellationToken.None);
     }
   }
 
@@ -85,7 +98,7 @@ public sealed class TestContext
     {
       var wallet = await WalletRepository.FindByIdAsync(share.WalletId, CancellationToken.None);
       if (wallet == Wallet.NotFound) continue;
-      wallet.Shares.Add(share);
+      wallet.Contribute(share.Amount, share.ContributorId, share.CreatedBy, share.CreatedOn);
 
       await WalletRepository.UpdateAsync(wallet, CancellationToken.None);
     }

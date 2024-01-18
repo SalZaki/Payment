@@ -1,3 +1,4 @@
+using System.Collections.Immutable;
 using Ardalis.GuardClauses;
 using Payment.Common.Abstraction.Domain;
 using Payment.Domain.Exceptions;
@@ -8,16 +9,17 @@ namespace Payment.Domain.Entities;
 
 public sealed record User : Aggregate<UserId>, IComparable<User>, IComparable
 {
+  private readonly List<Friendship> _friendships = new();
+
   public FullName FullName { get; }
 
-  public HashSet<Friendship> Friendships { get; }
+  public ImmutableHashSet<Friendship> Friendships => _friendships.ToImmutableHashSet();
 
   public static readonly User NotFound = Create(UserId.Create(Guid.Empty), FullName.Create(nameof(NotFound)));
 
   private User(UserId userId, FullName fullName) : base(userId)
   {
     FullName = fullName;
-    Friendships = new HashSet<Friendship>();
   }
 
   public static User Create(
@@ -42,27 +44,20 @@ public sealed record User : Aggregate<UserId>, IComparable<User>, IComparable
 
     CheckPolicy(new UserCannotAddItselfAsAFriend(Id, friend.Id));
 
-    if (Friendships.Any(x => x.Friend == friend))
+    if (_friendships.Any(x => x.Friend == friend))
     {
       throw new FriendAlreadyExistsException(friend.Id.ToString());
     }
 
-    Friendships.Add(Friendship.Create(FriendId.Create(Guid.NewGuid()), Id, friend));
-
-    // Assuming here that all friendships are bidirectional
-    friend.Friendships.Add(Friendship.Create(FriendId.Create(Guid.NewGuid()), friend.Id, this));
+    _friendships.Add(Friendship.Create(FriendId.Create(Guid.NewGuid()), Id, friend));
   }
 
   public void RemoveFriend(User friend)
   {
     Guard.Against.Null(friend, nameof(friend), "Friend can not be null.");
 
-    Friendships.RemoveWhere(x => x.Friend == friend);
-  }
-
-  public void RemoveFriends(IEnumerable<Friendship> friends)
-  {
-    Friendships.RemoveWhere(f => friends.Any(x => x.Friend == f.Friend));
+    var friendship = _friendships.FirstOrDefault(x => x.Friend == friend);
+    _friendships.Remove(friendship!);
   }
 
   public IReadOnlyList<User> GetConnectionList(User friend, int maxLevel)
@@ -103,13 +98,13 @@ public sealed record User : Aggregate<UserId>, IComparable<User>, IComparable
   {
     Guard.Against.Null(user, nameof(user), "User can not be null.");
 
-    if (Friendships.Count == 0 || user.Friendships.Count == 0)
+    if (_friendships.Count == 0 || user.Friendships.Count == 0)
     {
       return new List<User>().AsReadOnly();
     }
 
     var intersect = user.Friendships.Select(x => x.Friend).ToList();
-    var commonFriends = intersect.Intersect(Friendships.Select(x => x.Friend).ToList());
+    var commonFriends = intersect.Intersect(_friendships.Select(x => x.Friend).ToList());
 
     return commonFriends.ToList().AsReadOnly();
   }

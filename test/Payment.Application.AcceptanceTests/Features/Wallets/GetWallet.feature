@@ -47,7 +47,7 @@ Feature: Get Wallet
       Then the response should be successful
       And the wallet should have
         | WalletId                             | UserId                               | ContributorId                        | Currency | Amount | ShareCount | TotalSharesAmount |
-        | 73AC6B13-780F-4395-B468-506904422719 | 150A98BE-7F10-4BA4-A8B5-05B20E7A3A49 | 8A959DA8-C4BB-46EC-9CE9-BFD051822A90 | DZD      | 32.12  | 4          | 851.59            |
+        | 73AC6B13-780F-4395-B468-506904422719 | 150A98BE-7F10-4BA4-A8B5-05B20E7A3A49 | 8A959DA8-C4BB-46EC-9CE9-BFD051822A90 | DZD      | 32.12  | 1          | 851.59            |
 
     Examples:
       | WalletId                               |

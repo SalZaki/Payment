@@ -13,6 +13,7 @@ using Payment.Application.Users.Features.DeleteUser;
 using Payment.Application.Users.Repositories;
 using Payment.Common.Abstraction.Commands;
 using Payment.Common.Abstraction.Models;
+using Payment.Domain.Entities;
 using Payment.Domain.ValueObjects;
 using Xunit;
 
@@ -91,11 +92,13 @@ public sealed class WhenHandleAsyncIsCalled
   public async Task Then_should_handle_mapper_exceptions_given_unexpected_errors(Type type, string errorMessage)
   {
     // arrange
-    var userId = _fixture.Create<UserId>();
+//     var userId = _fixture.Create<UserId>();
+
+    var user = _fixture.Create<User>();
 
     var command = new DeleteUserCommand
     {
-      UserId = userId.ToString()
+      UserId = user.Id.ToString()
     };
 
     var expectedError = $"Failed to delete user due to {errorMessage}.";
@@ -105,6 +108,10 @@ public sealed class WhenHandleAsyncIsCalled
     _deleteUserCommandValidatorMock
       .ValidateAsync(Arg.Any<DeleteUserCommand>(), Arg.Any<CancellationToken>())
       .Returns(new ValidationResult());
+
+    _userRepositoryMock
+      .FindByIdAsync(Arg.Any<UserId>(), Arg.Any<CancellationToken>())
+      .Returns(user);
 
     _userRepositoryMock
       .DeleteByIdAsync(Arg.Any<UserId>(), Arg.Any<CancellationToken>())
@@ -122,14 +129,13 @@ public sealed class WhenHandleAsyncIsCalled
     errorResponse?.Error.Should().Be(expectedError);
   }
 
-
   [Fact]
   public async Task Then_should_succeed_given_valid_command()
   {
     // arrange
     var userId = _fixture.Create<UserId>();
 
-    var query = new DeleteUserCommand
+    var command = new DeleteUserCommand
     {
       UserId = userId.ToString()
     };
@@ -143,7 +149,7 @@ public sealed class WhenHandleAsyncIsCalled
       .Returns(Task.CompletedTask);
 
     // act
-    var actualResponse = await _sut.HandleAsync(query, CancellationToken.None);
+    var actualResponse = await _sut.HandleAsync(command, CancellationToken.None);
 
     // assert
     actualResponse.Should().NotBeNull();

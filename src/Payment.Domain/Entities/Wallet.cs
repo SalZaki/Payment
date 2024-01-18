@@ -1,3 +1,4 @@
+using System.Collections.Immutable;
 using Ardalis.GuardClauses;
 using Payment.Common.Abstraction.Domain;
 using Payment.Domain.Extensions;
@@ -8,11 +9,13 @@ namespace Payment.Domain.Entities;
 
 public sealed record Wallet : Aggregate<WalletId>, IComparable<Wallet>, IComparable
 {
+  private readonly List<Share> _share = new();
+
   public required UserId UserId { get; init; }
 
   public required Money Amount { get; init; }
 
-  public HashSet<Share> Shares { get; }
+  public ImmutableHashSet<Share> Shares => _share.ToImmutableHashSet();
 
   public IDictionary<string, decimal> TotalSharesAmount => Shares
     .Select(x => x.Amount)
@@ -22,7 +25,6 @@ public sealed record Wallet : Aggregate<WalletId>, IComparable<Wallet>, ICompara
 
   private Wallet(WalletId walletId) : base(walletId)
   {
-    Shares = new HashSet<Share>();
   }
 
   public static Wallet Create(
@@ -40,7 +42,7 @@ public sealed record Wallet : Aggregate<WalletId>, IComparable<Wallet>, ICompara
       UserId = userId,
       Amount = amount ?? Money.Empty(),
       CreatedBy = createdBy,
-      CreatedOn = createdOn ?? DateTime.UtcNow,
+      CreatedOn = createdOn ?? DateTime.UtcNow
     };
 
     return wallet;
@@ -80,7 +82,7 @@ public sealed record Wallet : Aggregate<WalletId>, IComparable<Wallet>, ICompara
 
   private void AppendShare(Money amount, UserId contributorId, string modifiedBy, DateTime modifiedOn)
   {
-    Shares.Append(Id, contributorId, amount, modifiedBy, modifiedOn);
+    _share.Append(Id, contributorId, amount, modifiedBy, modifiedOn);
   }
 
   private void AddShare(Money amount, UserId contributorId, string createdBy, DateTime createdOn)
@@ -89,6 +91,6 @@ public sealed record Wallet : Aggregate<WalletId>, IComparable<Wallet>, ICompara
 
     var share = Share.Create(shareId, Id, contributorId, amount, createdBy, createdOn);
 
-    Shares.Add(share);
+    _share.Add(share);
   }
 }

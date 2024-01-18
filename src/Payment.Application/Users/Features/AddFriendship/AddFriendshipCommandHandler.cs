@@ -93,8 +93,9 @@ public class AddFriendshipCommandHandler(
     try
     {
       user.AddFriend(friend);
-
       await _userRepository.UpdateAsync(user, cancellationToken);
+
+      friend.AddFriend(user);
       await _userRepository.UpdateAsync(friend, cancellationToken);
 
       return Option.None<ErrorResponse>();

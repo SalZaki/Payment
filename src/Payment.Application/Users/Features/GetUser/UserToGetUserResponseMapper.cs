@@ -23,11 +23,9 @@ public class UserToGetUserResponseMapper : IMapper<User, GetUserResponse>
     return source.Select(x =>
         new GetFriendshipResponse
         {
-          FriendId = x.Id.ToString(),
-          UserId = x.UserId.ToString(),
           Friend = new GetUserResponse
           {
-            UserId = x.UserId.ToString(),
+            UserId = x.Friend.Id.ToString(),
             FullName = x.Friend.FullName
           }
         })

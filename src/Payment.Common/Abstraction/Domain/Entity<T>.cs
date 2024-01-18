@@ -2,7 +2,7 @@ using Payment.Common.Abstraction.Domain.Exceptions;
 
 namespace Payment.Common.Abstraction.Domain;
 
-public abstract record Entity<T>(T Id) : IEntity<T>
+public abstract record Entity<TId>(TId Id) : IEntity<TId>
 {
   public DateTime? CreatedOn { get; set; }
 

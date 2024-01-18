@@ -28,8 +28,8 @@ Feature: Get User
       And the response should be a user with id <UserId>
 
     Examples:
-      | UserId                                 |
-      | "73AC6B13-780F-4395-B468-506904422719" |
+      | UserId                               |
+      | 73AC6B13-780F-4395-B468-506904422719 |
 #-----------------------------------------------------------------------------------------------------------------------
     @user
     @happy-paths
@@ -45,7 +45,7 @@ Feature: Get User
       And the user should have a friend with id <FriendId> and fullname <FriendFullName>
 
       Examples:
-        | UserId                                 | FriendId                               | FriendFullName      |
-        | "73AC6B13-780F-4395-B468-506904422719" | "FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF" | "Guillaume Reynard" |
-        | "73AC6B13-780F-4395-B468-506904422719" | "639A1CDD-7915-47E5-AA2B-263873542B28" | "Dr Andrew Martin"  |
+        | UserId                               | FriendId                             | FriendFullName      |
+        | 73AC6B13-780F-4395-B468-506904422719 | FF8C0411-745E-4E11-ADAF-8C9C3C5E34AF | "Guillaume Reynard" |
+        | 73AC6B13-780F-4395-B468-506904422719 | 639A1CDD-7915-47E5-AA2B-263873542B28 | "Dr Andrew Martin"  |
 #-----------------------------------------------------------------------------------------------------------------------

@@ -35,12 +35,12 @@ public class GetUserHappyPaths(ScenarioContext scenarioContext, TestContext test
     await testContext.SeedFriends(friendshipTable);
   }
 
-  [Given(@"a user with id ""(.*)""")]
-  public void GivenAUserWithId(string userId)
+  [Given("a user with id (.*)")]
+  public void GivenAUserWithId(Guid userId)
   {
     var query = new GetUserQuery
     {
-      UserId = userId
+      UserId = userId.ToString()
     };
 
     scenarioContext.Add(GetUserQueryKey, query);
@@ -67,18 +67,18 @@ public class GetUserHappyPaths(ScenarioContext scenarioContext, TestContext test
     scenarioContext.Add(GetUserResponseKey, response.AsT0);
   }
 
-  [Then(@"the response should be a user with id ""(.*)""")]
-  public void ThenTheResponseShouldBeAUserWithId(string userId)
+  [Then("the response should be a user with id (.*)")]
+  public void ThenTheResponseShouldBeAUserWithId(Guid userId)
   {
     var response = scenarioContext.Get<GetUserResponse>(GetUserResponseKey);
 
     response.Should().NotBeNull();
     response.UserId.Should().NotBeNullOrEmpty();
-    response.UserId.Should().BeEquivalentTo(userId);
+    response.UserId.Should().BeEquivalentTo(userId.ToString());
   }
 
-  [Then(@"the user should have a friend with id ""(.*)"" and fullname ""(.*)""")]
-  public void ThenTheUserShouldHaveAFriendWithIdAndFullname(string friendId, string fullname)
+  [Then(@"the user should have a friend with id (.*) and fullname ""(.*)""")]
+  public void ThenTheUserShouldHaveAFriendWithIdAndFullname(Guid friendId, string fullname)
   {
     var response = scenarioContext.Get<GetUserResponse>(GetUserResponseKey);
 
@@ -86,7 +86,7 @@ public class GetUserHappyPaths(ScenarioContext scenarioContext, TestContext test
     response.Should().BeOfType<GetUserResponse>();
     response.Friendships.Should().NotBeNull();
     response.Friendships?.Count.Should().BeGreaterThan(0);
-    response.Friendships?.Any(x => x.UserId == response.UserId).Should().BeTrue();
+    response.Friendships?.Any(x => x.Friend.UserId == friendId.ToString()).Should().BeTrue();
     response.Friendships?.Any(x => x.Friend.FullName == fullname).Should().BeTrue();
   }
 }
