@@ -1,9 +1,6 @@
-# 💳 Payment Microservice
-
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?logoColor=white&style=for-the-badge)](http://commitizen.github.io/cz-cli/)
 
-## Introduction
-
+# 💳 Payment Microservice
 
 ## Architecture
 
@@ -31,7 +28,7 @@ The architecture adheres to Clean Architecture principles and is structured as f
 ```
 ### Payment Application
 
-The Payment Application of the most outside layer or edge layer which interacts with clients and responsible for request processing. it also provides implementation details for any repository.
+The Payment Application of the most outside layer or edge layer which interacts with clients and responsible for request processing. it also provides implementation details for any repository. 
 
 ### Payment Domain
 
