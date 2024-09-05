@@ -126,8 +126,8 @@ public static readonly Currency EUR = Currency.Create(
 
 The **Payment Infrastructure** layer provides two key repositories:
 
-- **InMemoryUserRepository**
-- **InMemoryWalletRepository**
+- InMemoryUserRepository
+- InMemoryWalletRepository
 
 These ensure efficient data storage and retrieval.
 
