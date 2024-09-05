@@ -1,6 +1,6 @@
 #=============================================
 Feature: Get Connection List
-![User] (../../../assets/user.svg)
+![User] (../assets/user.svg)
 
     In order to support users in the system
 

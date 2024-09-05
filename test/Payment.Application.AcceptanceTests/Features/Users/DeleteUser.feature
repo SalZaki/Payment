@@ -1,6 +1,6 @@
 #=======================================================================================================================
 Feature: Delete User
-![User] (../../../assets/user.svg)
+![User] (../assets/user.svg)
 
     In order to support users in the system
 

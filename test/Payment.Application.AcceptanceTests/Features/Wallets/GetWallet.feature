@@ -1,6 +1,6 @@
 #=======================================================================================================================
 Feature: Get Wallet
-![Wallet] (../../../assets/wallet.svg)
+![Wallet] (../assets/wallet.svg)
 
     In order to use wallets in the system
 

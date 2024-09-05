@@ -40,9 +40,9 @@ namespace Payment.Application.AcceptanceTests.Features.Users
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Users", "Get Connection List", "![User] (../../../assets/user.svg)\n\n    In order to support users in the system\n\n" +
-                    "    As a user service\n\n    I want to facilitate the retrieval of connection list" +
-                    " between two users", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Users", "Get Connection List", "![User] (../assets/user.svg)\n\n    In order to support users in the system\n\n    As" +
+                    " a user service\n\n    I want to facilitate the retrieval of connection list betwe" +
+                    "en two users", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
