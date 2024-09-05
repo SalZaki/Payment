@@ -1,0 +1,14 @@
+title: Payment Microservice
+email: salzaki@hotmail.com
+description: Payment Microservice project web site.
+baseurl: ""
+url: ""
+twitter_username: sal_zaki
+github_username:  salzaki
+
+aux_links:
+  "salzaki.payment on GitHub": https://github.com/salzaki/Payment
+
+theme: just-the-docs
+plugins:
+  - jekyll-feed
